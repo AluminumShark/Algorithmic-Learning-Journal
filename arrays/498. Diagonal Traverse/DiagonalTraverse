@@ -1,0 +1,53 @@
+from typing import List
+
+class Solution:
+    """
+    Traverse a matrix in diagonal order:
+    Move along diagonals and flip direction when hitting borders.
+    Direction encoding:
+      +1  => moving up-right  (row - 1, col + 1)
+      -1  => moving down-left (row + 1, col - 1)
+    """
+
+    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+        # Edge case: empty matrix
+        if not mat or not mat[0]:
+            return []
+
+        m, n = len(mat), len(mat[0])
+        traverse: List[int] = []
+        row, col = 0, 0
+        direct = 1  # +1: up-right, -1: down-left
+
+        # Loop until we collect all m * n elements
+        while len(traverse) < m * n:
+            traverse.append(mat[row][col])
+
+            if direct == 1:
+                # Moving up-right: try to go (row - 1, col + 1)
+                # If at the last column, must go down and flip direction
+                if col == n - 1:
+                    row += 1
+                    direct = -1
+                # If at the first row, must go right and flip direction
+                elif row == 0:
+                    col += 1
+                    direct = -1
+                else:
+                    row -= 1
+                    col += 1
+            else:
+                # Moving down-left: try to go (row + 1, col - 1)
+                # If at the last row, must go right and flip direction
+                if row == m - 1:
+                    col += 1
+                    direct = 1
+                # If at the first column, must go down and flip direction
+                elif col == 0:
+                    row += 1
+                    direct = 1
+                else:
+                    row += 1
+                    col -= 1
+        
+        return traverse
