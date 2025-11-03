@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     """
     Bubble Sort (Demonstration Only — TLE on LeetCode 912)

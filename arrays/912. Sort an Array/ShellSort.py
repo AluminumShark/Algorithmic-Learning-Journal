@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     """
     Shell Sort (Improved Insertion Sort — Accepted on LeetCode 912)

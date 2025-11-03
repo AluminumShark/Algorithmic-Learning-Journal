@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     """
     Merge Sort (Efficient O(n log n) Divide & Conquer Algorithm)
