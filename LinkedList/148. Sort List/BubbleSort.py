@@ -1,17 +1,15 @@
+from typing import Optional
+
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 class Solution:
     """
     Bubble Sort on Linked List (Demonstration Only — TLE on LeetCode 148)
     """
-
-    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        return self.bubbleSort(head)
-
     def bubbleSort(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head or not head.next:
             return head
@@ -30,3 +28,6 @@ class Solution:
             node_i = node_i.next
         
         return head
+
+    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        return self.bubbleSort(head)
