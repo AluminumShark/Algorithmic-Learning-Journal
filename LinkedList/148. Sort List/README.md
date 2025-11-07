@@ -67,7 +67,6 @@ This problem demonstrates multiple sorting approaches adapted for linked lists:
 |-----------|----------------|------------------|------------------|
 | Merge Sort | O(n log n) | O(log n) | Accepted |
 | Quick Sort | O(n log n) avg | O(log n) | May TLE |
-| Radix Sort | O(d × n) | O(n) | Accepted* |
 | Counting Sort | O(n + k) | O(k) | Accepted* |
 | Bubble/Selection/Insertion | O(n²) | O(1) | TLE |
 
