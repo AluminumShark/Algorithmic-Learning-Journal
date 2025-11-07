@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
         left = None
@@ -19,7 +21,7 @@ class Solution:
                 pivotIdx = i
                 break
 
-        if pivotIdx != None:
+        if pivotIdx is not None:
             return pivotIdx
         else:
             return -1

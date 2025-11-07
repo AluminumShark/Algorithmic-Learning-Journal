@@ -6,7 +6,6 @@ class ListNode:
         self.val = val
         self.next = next
 
-from typing import Optional
 
 class Solution:
     """
