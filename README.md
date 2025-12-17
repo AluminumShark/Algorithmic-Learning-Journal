@@ -6,7 +6,7 @@ This repository follows the [NeetCode Roadmap](https://neetcode.io/) structure f
 
 ---
 
-## 📚 Table of Contents
+## 📚 Topics
 
 | # | Topic | Description |
 |---|-------|-------------|
@@ -31,75 +31,43 @@ This repository follows the [NeetCode Roadmap](https://neetcode.io/) structure f
 
 ---
 
-## 📖 Current Progress
+## 📂 Repository Structure
 
-### 01-Arrays-and-Hashing
-- [1122. Relative Sort Array](./01-Arrays-and-Hashing/1122.%20Relative%20Sort%20Array/)
-- [217. Contains Duplicate](./01-Arrays-and-Hashing/217.%20Contains%20Duplicate/)
-- [28. Find the Index of the First Occurrence in a String](./01-Arrays-and-Hashing/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String/)
-- [506. Relative Ranks](./01-Arrays-and-Hashing/506.%20Relative%20Ranks/)
-- [724. Find Pivot Index](./01-Arrays-and-Hashing/724.%20Find%20Pivot%20Index/)
-- [912. Sort an Array](./01-Arrays-and-Hashing/912.%20Sort%20an%20Array/)
+Each problem is organized in its own folder with:
+- `solution.py` — Solution code with multiple approaches when applicable
+- `README.md` — Problem description, algorithm explanation, complexity analysis, and key concepts
 
-### 02-Two-Pointers
-- [167. Two Sum II - Input Array Is Sorted](./02-Two-Pointers/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted/)
-- [26. Remove Duplicates from Sorted Array](./02-Two-Pointers/26.%20Remove%20Duplicates%20from%20Sorted%20Array/)
-- [349. Intersection of Two Arrays](./02-Two-Pointers/349.%20Intersection%20of%20Two%20Arrays/)
-- [88. Merge Sorted Array](./02-Two-Pointers/88.%20Merge%20Sorted%20Array/)
+```
+├── 01-Arrays-and-Hashing/
+│   ├── 1. Two Sum/
+│   │   ├── solution.py
+│   │   └── README.md
+│   └── ...
+├── 02-Two-Pointers/
+│   └── ...
+└── ...
+```
 
-### 03-Stack
-- [20. Valid Parentheses](./03-Stack/20.%20Valid%20Parentheses/)
-- [227. Basic Calculator II](./03-Stack/227.%20Basic%20Calculator%20II/)
-- [496. Next Greater Element I](./03-Stack/496.%20Next%20Greater%20Element%20I/)
-- [622. Design Circular Queue](./03-Stack/622.%20Design%20Circular%20Queue/)
-- [641. Design Circular Deque](./03-Stack/641.%20Design%20Circular%20Deque/)
-- [739. Daily Temperatures](./03-Stack/739.%20Daily%20Temperatures/)
-- [1700. Number of Students Unable to Eat Lunch](./03-Stack/1700.%20Number%20of%20Students%20Unable%20to%20Eat%20Lunch/)
+---
 
-### 04-Binary-Search
-- [278. First Bad Version](./04-Binary-Search/278.%20First%20Bad%20Version/)
-- [704. Binary Search](./04-Binary-Search/704.%20Binary%20Search/)
+## 📝 How to Use
 
-### 05-Sliding-Window
-- [3. Longest Substring Without Repeating Characters](./05-Sliding-Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters/)
-- [1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](./05-Sliding-Window/1343.%20Number%20of%20Sub-arrays%20of%20Size%20K%20and%20Average%20Greater%20than%20or%20Equal%20to%20Threshold/)
-
-### 06-Linked-List
-- [19. Remove Nth Node From End of List](./06-Linked-List/19.%20Remove%20Nth%20Node%20From%20End%20of%20List/)
-- [21. Merge Two Sorted Lists](./06-Linked-List/21.%20Merge%20Two%20Sorted%20Lists/)
-- [148. Sort List](./06-Linked-List/148.%20Sort%20List/)
-- [707. Design Linked List](./06-Linked-List/707.%20Design%20Linked%20List/)
-- [876. Middle of the Linked List](./06-Linked-List/876.%20Middle%20of%20the%20Linked%20List/)
-- [1472. Design Browser History](./06-Linked-List/1472.%20Design%20Browser%20History/)
-
-### 10-Heap-Priority-Queue
-- [215. Kth Largest Element in an Array](./10-Heap-Priority-Queue/215.%20Kth%20Largest%20Element%20in%20an%20Array/)
-
-### 18-Math-and-Geometry
-- [48. Rotate Image](./18-Math-and-Geometry/48.%20Rotate%20Image/)
-- [498. Diagonal Traverse](./18-Math-and-Geometry/498.%20Diagonal%20Traverse/)
+1. **Follow the Roadmap**: Start from `01-Arrays-and-Hashing` and progress sequentially
+2. **Read the Notes**: Each problem folder contains solution code and detailed explanations
+3. **Practice**: Try solving problems before looking at solutions
+4. **Review**: Revisit completed topics to reinforce learning
 
 ---
 
 ## 🔗 References
 
 ### Learning Resources
-- **[NeetCode Roadmap](https://neetcode.io/)** - A structured approach to mastering coding interviews with categorized problem sets and video explanations
-- **[算法通關手冊 (LeetCode)](https://algo.itcharge.cn/)** - Comprehensive Chinese algorithm learning guide covering data structures, algorithms, and 1000+ LeetCode problem solutions
+- **[NeetCode Roadmap](https://neetcode.io/)** — Structured approach to mastering coding interviews
+- **[算法通關手冊](https://algo.itcharge.cn/)** — Comprehensive Chinese algorithm learning guide
 
-### Additional Resources
-- [LeetCode](https://leetcode.com/) - Practice platform for coding problems
-- [NeetCode 150](https://neetcode.io/practice) - Curated list of 150 essential problems
-- [Blind 75](https://neetcode.io/practice) - Classic 75 problems for interview preparation
-
----
-
-## 📝 How to Use This Repository
-
-1. **Follow the Roadmap**: Start from `01-Arrays-and-Hashing` and progress sequentially
-2. **Read the Notes**: Each problem folder contains solution code and detailed explanations
-3. **Practice**: Try solving problems before looking at solutions
-4. **Review**: Revisit completed topics to reinforce learning
+### Practice Platforms
+- [LeetCode](https://leetcode.com/) — Practice platform for coding problems
+- [NeetCode 150](https://neetcode.io/practice) — Curated list of 150 essential problems
 
 ---
 
