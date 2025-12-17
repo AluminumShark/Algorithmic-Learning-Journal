@@ -2,7 +2,7 @@
 
 A structured exploration of data structures and algorithms with detailed notes on problem-solving logic, complexity analysis, and design patterns for computational thinking.
 
-This repository follows the [NeetCode Roadmap](https://neetcode.io/) structure for systematic algorithm learning.
+This repository contains solutions to [LeetCode](https://leetcode.com/) problems, organized following the [NeetCode Roadmap](https://neetcode.io/) structure for systematic algorithm learning.
 
 ---
 
@@ -61,13 +61,13 @@ Each problem is organized in its own folder with:
 
 ## 🔗 References
 
+### Problem Source
+- **[LeetCode](https://leetcode.com/)** — All problems in this repository are sourced from LeetCode
+
 ### Learning Resources
 - **[NeetCode Roadmap](https://neetcode.io/)** — Structured approach to mastering coding interviews
+- **[NeetCode 150](https://neetcode.io/practice)** — Curated list of 150 essential problems
 - **[算法通關手冊](https://algo.itcharge.cn/)** — Comprehensive Chinese algorithm learning guide
-
-### Practice Platforms
-- [LeetCode](https://leetcode.com/) — Practice platform for coding problems
-- [NeetCode 150](https://neetcode.io/practice) — Curated list of 150 essential problems
 
 ---
 
