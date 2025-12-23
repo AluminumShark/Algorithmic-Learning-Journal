@@ -2,7 +2,7 @@
 
 ## Overview
 
-Find the length of the longest substring without repeating characters using a sliding window technique.
+Find the length of the longest substring without repeating characters using a sliding window technique with a hash set.
 
 ## Problem Description
 
@@ -13,80 +13,83 @@ Given a string `s`, find the length of the longest substring without repeating c
 Input: s = "abcabcbb"
 Output: 3
 Explanation: The answer is "abc", with the length of 3.
+
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
 ```
 
 ## Algorithm
 
-**Variable-Size Sliding Window**: Use two pointers to maintain a window with unique characters, expanding when possible and shrinking when duplicates are found.
+**Variable-Size Sliding Window with Set**: Use two pointers to maintain a window with unique characters, tracked by a hash set.
 
 **Key Steps:**
-1. Initialize two pointers: `left = 0` and `right = 0`
-2. Use a dictionary to track character frequencies in current window
-3. Expand window by moving `right` pointer:
-   - Add `s[right]` to window dictionary
-4. Shrink window when duplicate found:
-   - While `window[s[right]] > 1` (duplicate exists):
-     - Remove `s[left]` from window
-     - Move `left` pointer forward
-5. Update maximum length: `max(result, right - left + 1)`
-6. Continue until `right` reaches end of string
+1. Initialize `L = 0`, `seen = set()`, `length = 0`
+2. Iterate through string with `R` pointer:
+   - While current character `ch` is in `seen`:
+     - Remove `s[L]` from `seen`
+     - Move `L` pointer forward
+   - Add `ch` to `seen`
+   - Update maximum length: `max(length, R - L + 1)`
+3. Return `length`
 
 ## Complexity Analysis
 
-- **Time Complexity:** O(n) - each character is visited at most twice (once by `right`, once by `left`)
-- **Space Complexity:** O(min(n, m)) - where n is string length and m is character set size (dictionary storage)
+- **Time Complexity:** O(n) - each character is visited at most twice (once by `R`, once by `L`)
+- **Space Complexity:** O(n) or O(1) depending on charset
+  - O(min(n, m)) where m is character set size
+  - O(1) if limited to ASCII (128) or extended ASCII (256)
 
-## Key Insight
+## Key Concepts
 
-The sliding window maintains the invariant that all characters in `[left, right]` are unique. When a duplicate is detected, we shrink from the left until the duplicate is removed.
+### Sliding Window with Set
 
-## Alternative Approaches
+- **Set for Uniqueness**: Use a set instead of dictionary for cleaner O(1) membership check
+- **Shrink Until Valid**: When duplicate found, shrink window from left until duplicate is removed
+- **Expand Always**: Right pointer always moves forward
 
-1. **Hash Set with Character Index Mapping**: O(n) time
-   - Store last occurrence index of each character
-   - When duplicate found, jump `left` directly to `last_index + 1`
-   - Slightly more efficient but similar complexity
+### Window Invariant
 
-2. **Brute Force**: O(n³) time
-   - Check all possible substrings
-   - Not efficient for large inputs
+The window `[L, R]` always contains unique characters:
+```
+s = "abcabcbb"
+     L R        seen = {a, b, c}, length = 3
+       L R      After encountering 'a': shrink until 'a' is removed
+```
 
 ## Implementation Details
 
-- Dictionary-based frequency tracking
-- Expand-while-valid, shrink-until-valid pattern
-- Window size tracked by `right - left + 1`
-- Maximum length updated at each valid window state
+- Uses `set()` for O(1) add/remove/lookup
+- `enumerate(s)` provides both index and character
+- Window shrinks with `while` loop until constraint satisfied
+- Length updated after each valid window expansion
 
 ## Pattern Recognition
 
 This problem demonstrates:
 - Variable-size sliding window technique
-- Two-pointer technique
-- Character frequency tracking
-- Window maintenance with constraints
+- Set-based uniqueness tracking
+- Shrink-until-valid pattern
+- Two-pointer window management
 
 ## Use Cases
 
 - Longest unique sequence finding
 - Substring analysis problems
 - Window-based string processing
-- Pattern matching variations
+- Character uniqueness constraints
 
 ## Related Problems
 
 - Longest Substring with At Most K Distinct Characters
-- Minimum Window Substring
-- Longest Substring with At Most Two Distinct Characters
-- Substring with Concatenation of All Words
-
-## Optimization Note
-
-The current implementation uses a while loop to shrink the window. An optimized version can use a hash map storing the last occurrence index of each character:
-- When duplicate found: `left = max(left, last_index[s[right]] + 1)`
-- This avoids the shrinking loop and directly jumps to the correct position
+- Minimum Window Substring (LeetCode 76)
+- Longest Repeating Character Replacement (LeetCode 424)
+- Permutation in String (LeetCode 567)
 
 ## Files
 
-- `SlidingWindow.py`: Variable-size sliding window with dictionary tracking
-
+- `solution.py`: Sliding window with hash set implementation
