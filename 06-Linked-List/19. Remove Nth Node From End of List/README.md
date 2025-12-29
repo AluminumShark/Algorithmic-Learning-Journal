@@ -2,7 +2,7 @@
 
 ## Overview
 
-Remove the nth node from the end of a linked list in a single pass using the two-pointer technique.
+Remove the nth node from the end of a linked list in a single pass using the two-pointer technique with a fixed gap.
 
 ## Problem Description
 
@@ -12,85 +12,86 @@ Given the head of a linked list, remove the nth node from the end of the list an
 ```
 Input: head = [1,2,3,4,5], n = 2
 Output: [1,2,3,5]
+
+Input: head = [1], n = 1
+Output: []
+
+Input: head = [1,2], n = 1
+Output: [1]
 ```
 
 ## Algorithm
 
-**Two-Pointer Technique (Fast & Slow)**: Use two pointers with a fixed gap to locate the target node in one pass.
+**Two Pointers with a Gap**: Create a fixed gap of n nodes between slow and fast pointers to locate the target node in one pass.
 
 **Key Steps:**
-1. Create a dummy node before head to handle edge cases (e.g., removing head)
-2. Initialize `slow` at dummy and `fast` at head
-3. Move `fast` pointer n steps ahead
-4. Move both `slow` and `fast` simultaneously until `fast` reaches the end
-5. When `fast` is None, `slow` is positioned right before the target node
-6. Remove target node: `slow.next = slow.next.next`
-7. Return `dummy.next` as the new head
+1. Create a dummy node before head to handle edge cases
+2. Initialize both `S` (slow) and `F` (fast) at dummy
+3. Move `F` pointer n steps ahead
+4. Move both `S` and `F` simultaneously until `F.next` is None
+5. Remove target node: `S.next = S.next.next`
+6. Return `dummy.next` as the new head
 
 ## Complexity Analysis
 
-- **Time Complexity:** O(L) - single pass through the list, where L is the length
+- **Time Complexity:** O(n) - single pass through the list
 - **Space Complexity:** O(1) - only uses constant extra space for pointers
 
-## Key Insight
+## Key Concepts
 
-By maintaining a gap of n nodes between `fast` and `slow`:
-- When `fast` reaches the end (None), `slow` is exactly n nodes from the end
-- `slow.next` is the node to be removed
-- Dummy node eliminates special case handling for head removal
+### Two Pointers with Fixed Gap
 
-## Visual Example
+By maintaining a gap of n nodes between fast and slow:
 
-```
-Initial: dummy -> 1 -> 2 -> 3 -> 4 -> 5, n = 2
-         slow    fast
+```python
+# Move Fast pointer n steps ahead
+for _ in range(n):
+    F = F.next
 
-After moving fast n steps:
-         dummy -> 1 -> 2 -> 3 -> 4 -> 5
-         slow              fast
-
-After moving both to end:
-         dummy -> 1 -> 2 -> 3 -> 4 -> 5 -> None
-                          slow              fast
-
-Remove slow.next (node 4):
-         dummy -> 1 -> 2 -> 3 -> 5
+# Now F is n steps ahead of S
+# Move both until Fast reaches the end
+while F.next:
+    S = S.next
+    F = F.next
 ```
 
-## Alternative Approaches
+When `F.next` is None, `S` is positioned right before the target node.
 
-1. **Two-Pass Approach**: O(L) time, O(1) space
-   - First pass: count list length
-   - Second pass: remove (length - n)th node
-   - Less elegant but straightforward
+### Visual Walkthrough
 
-2. **Stack-Based**: O(L) time, O(L) space
-   - Push all nodes onto stack
-   - Pop n nodes, remove the next one
-   - More space overhead
+```
+List: 1 -> 2 -> 3 -> 4 -> 5, n = 2
+
+Step 1 - Initialize at dummy:
+dummy -> 1 -> 2 -> 3 -> 4 -> 5
+S, F
+
+Step 2 - Move F ahead n (2) steps:
+dummy -> 1 -> 2 -> 3 -> 4 -> 5
+S            F
+
+Step 3 - Move both until F.next is None:
+dummy -> 1 -> 2 -> 3 -> 4 -> 5
+              S            F
+
+Step 4 - Remove S.next (node 4):
+dummy -> 1 -> 2 -> 3 ------> 5
+
+Result: 1 -> 2 -> 3 -> 5
+```
+
+### Dummy Node Pattern
+
+The dummy node handles edge cases elegantly:
+- If head needs to be removed (n = list length), dummy ensures there's always a node before it
+- `dummy.next` always points to the correct new head
 
 ## Implementation Details
 
-- **Dummy Node Pattern**: Simplifies edge case handling
-  - If head needs to be removed, dummy ensures there's always a node before it
-  - Eliminates need for special head removal logic
-
-- **Fixed Gap Technique**: 
-  - Gap of n nodes maintained throughout traversal
-  - When fast reaches end, slow is at correct position
-
-- **One-Pass Efficiency**: 
-  - More efficient than two-pass approach
-  - Better cache locality
-
-## Edge Cases
-
-- Removing the head node (n equals list length)
-- Single node list (n = 1)
-- Empty list
-- n equals list length (remove head)
-
-All handled by dummy node pattern.
+- Both pointers start at `dummy` (not head)
+- Loop condition `while F.next` ensures `F` stops at the last node
+- When `F.next` is None, `S.next` is the node to remove
+- `S.next = S.next.next` performs the removal
 
 ## Pattern Recognition
 
@@ -103,7 +104,7 @@ This problem demonstrates:
 ## Use Cases
 
 - Removing nodes from specific positions
-- Nth element operations
+- Nth element from end operations
 - Two-pointer patterns on linked lists
 - Single-pass optimizations
 
@@ -111,10 +112,17 @@ This problem demonstrates:
 
 - Remove Duplicates from Sorted List
 - Remove Linked List Elements
-- Delete Node in a Linked List
-- Middle of the Linked List
+- Delete Node in a Linked List (LeetCode 237)
+- Middle of the Linked List (LeetCode 876)
+
+## Edge Cases
+
+- Removing the head node (n equals list length)
+- Single node list (n = 1)
+- n equals list length (remove head)
+
+All handled by dummy node pattern.
 
 ## Files
 
-- `TwoPointers.py`: Two-pointer implementation with dummy node
-
+- `solution.py`: Two-pointer implementation with dummy node
