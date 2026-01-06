@@ -31,6 +31,63 @@ This repository contains solutions to [LeetCode](https://leetcode.com/) problems
 
 ---
 
+## 📖 Current Progress
+
+### 01-Arrays-and-Hashing
+- [28. Find the Index of the First Occurrence in a String](./01-Arrays-and-Hashing/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String/)
+- [217. Contains Duplicate](./01-Arrays-and-Hashing/217.%20Contains%20Duplicate/)
+- [506. Relative Ranks](./01-Arrays-and-Hashing/506.%20Relative%20Ranks/)
+- [724. Find Pivot Index](./01-Arrays-and-Hashing/724.%20Find%20Pivot%20Index/)
+- [912. Sort an Array](./01-Arrays-and-Hashing/912.%20Sort%20an%20Array/)
+- [1122. Relative Sort Array](./01-Arrays-and-Hashing/1122.%20Relative%20Sort%20Array/)
+
+### 02-Two-Pointers
+- [26. Remove Duplicates from Sorted Array](./02-Two-Pointers/26.%20Remove%20Duplicates%20from%20Sorted%20Array/)
+- [88. Merge Sorted Array](./02-Two-Pointers/88.%20Merge%20Sorted%20Array/)
+- [167. Two Sum II - Input Array Is Sorted](./02-Two-Pointers/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted/)
+- [349. Intersection of Two Arrays](./02-Two-Pointers/349.%20Intersection%20of%20Two%20Arrays/)
+
+### 03-Stack
+- [20. Valid Parentheses](./03-Stack/20.%20Valid%20Parentheses/)
+- [227. Basic Calculator II](./03-Stack/227.%20Basic%20Calculator%20II/)
+- [496. Next Greater Element I](./03-Stack/496.%20Next%20Greater%20Element%20I/)
+- [622. Design Circular Queue](./03-Stack/622.%20Design%20Circular%20Queue/)
+- [641. Design Circular Deque](./03-Stack/641.%20Design%20Circular%20Deque/)
+- [739. Daily Temperatures](./03-Stack/739.%20Daily%20Temperatures/)
+- [1700. Number of Students Unable to Eat Lunch](./03-Stack/1700.%20Number%20of%20Students%20Unable%20to%20Eat%20Lunch/)
+
+### 04-Binary-Search
+- [278. First Bad Version](./04-Binary-Search/278.%20First%20Bad%20Version/)
+- [704. Binary Search](./04-Binary-Search/704.%20Binary%20Search/)
+
+### 05-Sliding-Window
+- [3. Longest Substring Without Repeating Characters](./05-Sliding-Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters/)
+- [1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](./05-Sliding-Window/1343.%20Number%20of%20Sub-arrays%20of%20Size%20K%20and%20Average%20Greater%20than%20or%20Equal%20to%20Threshold/)
+
+### 06-Linked-List
+- [19. Remove Nth Node From End of List](./06-Linked-List/19.%20Remove%20Nth%20Node%20From%20End%20of%20List/)
+- [21. Merge Two Sorted Lists](./06-Linked-List/21.%20Merge%20Two%20Sorted%20Lists/)
+- [23. Merge k Sorted Lists](./06-Linked-List/23.%20Merge%20k%20Sorted%20Lists/) ⭐ *Hard*
+- [25. Reverse Nodes in k-Group](./06-Linked-List/25.%20Reverse%20Nodes%20in%20k-Group/) ⭐ *Hard*
+- [148. Sort List](./06-Linked-List/148.%20Sort%20List/)
+- [707. Design Linked List](./06-Linked-List/707.%20Design%20Linked%20List/)
+- [876. Middle of the Linked List](./06-Linked-List/876.%20Middle%20of%20the%20Linked%20List/)
+- [1472. Design Browser History](./06-Linked-List/1472.%20Design%20Browser%20History/)
+
+### 07-Trees
+- [144. Binary Tree Preorder Traversal](./07-Trees/144.%20Binary%20Tree%20Preorder%20Traversal/)
+- [145. Binary Tree Postorder Traversal](./07-Trees/145.%20Binary%20Tree%20Postorder%20Traversal/) ⭐ *Visit Flag Technique*
+- [173. Binary Search Tree Iterator](./07-Trees/173.%20Binary%20Search%20Tree%20Iterator/)
+
+### 10-Heap-Priority-Queue
+- [215. Kth Largest Element in an Array](./10-Heap-Priority-Queue/215.%20Kth%20Largest%20Element%20in%20an%20Array/)
+
+### 18-Math-and-Geometry
+- [48. Rotate Image](./18-Math-and-Geometry/48.%20Rotate%20Image/)
+- [498. Diagonal Traverse](./18-Math-and-Geometry/498.%20Diagonal%20Traverse/)
+
+---
+
 ## 📂 Repository Structure
 
 Each problem is organized in its own folder with:
