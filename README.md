@@ -75,9 +75,12 @@ This repository contains solutions to [LeetCode](https://leetcode.com/) problems
 - [1472. Design Browser History](./06-Linked-List/1472.%20Design%20Browser%20History/)
 
 ### 07-Trees
+- [104. Maximum Depth of Binary Tree](./07-Trees/104.%20Maximum%20Depth%20of%20Binary%20Tree/) — *DFS/BFS comparison*
 - [144. Binary Tree Preorder Traversal](./07-Trees/144.%20Binary%20Tree%20Preorder%20Traversal/)
 - [145. Binary Tree Postorder Traversal](./07-Trees/145.%20Binary%20Tree%20Postorder%20Traversal/) ⭐ *Visit Flag Technique*
 - [173. Binary Search Tree Iterator](./07-Trees/173.%20Binary%20Search%20Tree%20Iterator/)
+- [226. Invert Binary Tree](./07-Trees/226.%20Invert%20Binary%20Tree/) — *DFS/BFS comparison*
+- [543. Diameter of Binary Tree](./07-Trees/543.%20Diameter%20of%20Binary%20Tree/) ⭐ *Return height, track diameter*
 
 ### 10-Heap-Priority-Queue
 - [215. Kth Largest Element in an Array](./10-Heap-Priority-Queue/215.%20Kth%20Largest%20Element%20in%20an%20Array/)
