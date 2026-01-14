@@ -43,8 +43,8 @@ def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNod
 
 | Traversal | Order | First Element |
 |-----------|-------|---------------|
-| Preorder | **Root** → Left → Right | Always the root |
-| Inorder | Left → **Root** → Right | Root in middle |
+| Preorder | **Root** -> Left -> Right | Always the root |
+| Inorder | Left -> **Root** -> Right | Root in middle |
 
 So `preorder[0]` tells us **what** the root is, and `inorder` tells us **where** to split left/right subtrees.
 
@@ -52,11 +52,11 @@ So `preorder[0]` tells us **what** the root is, and `inorder` tells us **where**
 
 ```
 preorder = [3, 9, 20, 15, 7]
-            ↑
+            ^
            root
 
 inorder  = [9, 3, 15, 20, 7]
-            ↑  ↑  ↑--------↑
+            ^  ^  ^--------^
           left root  right
 
 mid = inorder.index(3) = 1
@@ -87,8 +87,8 @@ Step 1: preorder=[3,9,20,15,7], inorder=[9,3,15,20,7]
 
 Step 2 (left): preorder=[9], inorder=[9]
                root=9, mid=0
-               left:  [], [] → None
-               right: [], [] → None
+               left:  [], [] -> None
+               right: [], [] -> None
 
 Step 3 (right): preorder=[20,15,7], inorder=[15,20,7]
                 root=20, mid=1
@@ -100,7 +100,7 @@ Step 3 (right): preorder=[20,15,7], inorder=[15,20,7]
 
 ---
 
-## ⚠️ Important: Slicing Complexity Discussion
+## Important: Slicing Complexity Discussion
 
 ### The Slicing Overhead Problem
 
@@ -121,7 +121,7 @@ This is an excellent topic to discuss in interviews:
 
 | Aspect | Slicing Solution | Optimized Solution |
 |--------|-----------------|-------------------|
-| Code Clarity | ✅ Very clean | ❌ More complex |
+| Code Clarity | Very clean | More complex |
 | Time Complexity | O(n²) worst case | O(n) |
 | Space for arrays | O(n²) total copies | O(1) extra |
 

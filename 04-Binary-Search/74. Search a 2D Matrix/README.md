@@ -52,7 +52,7 @@ Output: false
 ## Key Concepts
 
 - **2D to 1D Mapping**: Convert 2D matrix indices to 1D array index
-  - 1D index `i` → 2D position: `row = i // m`, `col = i % m`
+  - 1D index `i` -> 2D position: `row = i // m`, `col = i % m`
   - This works because rows are stored consecutively in memory
 - **Binary Search on Sorted Structure**: The matrix properties guarantee sorted order when flattened
 - **Coordinate Conversion**: Efficiently map between linear and 2D indices

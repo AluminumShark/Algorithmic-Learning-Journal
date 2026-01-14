@@ -46,7 +46,7 @@ The core technique involves three pointers working together:
 ```
 Before:  prev -> curr -> temp -> ...
 After:   prev <- curr    temp -> ...
-                  ↓
+                  v
          new prev  new curr
 ```
 

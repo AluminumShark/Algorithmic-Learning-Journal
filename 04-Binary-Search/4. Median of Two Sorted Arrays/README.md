@@ -62,11 +62,11 @@ The median divides a sorted array into two halves. For two sorted arrays, we wan
 2. All elements in the left half ≤ all elements in the right half
 
 ```
-Array A:  [1, 3, | 5, 7]      ← partition at position i=2
-Array B:  [2, 4, | 6, 8, 9]   ← partition at position j=2
+Array A:  [1, 3, | 5, 7]      <- partition at position i=2
+Array B:  [2, 4, | 6, 8, 9]   <- partition at position j=2
 
-Left half:  {1, 3, 2, 4}  →  max = 4
-Right half: {5, 7, 6, 8, 9}  →  min = 5
+Left half:  {1, 3, 2, 4}  ->  max = 4
+Right half: {5, 7, 6, 8, 9}  ->  min = 5
 ```
 
 ### Understanding the Variables
@@ -87,8 +87,8 @@ j = leftSize - i    # Number of elements from B in left half
 A = [1, 3, 5], B = [2, 4, 6, 8]
 total = 7, leftSize = 3
 
-If i = 1: We take 1 element from A → [1]
-Then j = 3 - 1 = 2: We take 2 elements from B → [2, 4]
+If i = 1: We take 1 element from A -> [1]
+Then j = 3 - 1 = 2: We take 2 elements from B -> [2, 4]
 Left half = {1, 2, 4}
 ```
 
@@ -104,17 +104,17 @@ Bright = B[j]     if j < n else float('inf')   # Smallest element from B in righ
 **Visual Representation:**
 ```
 Array A:  [ ... Aleft | Aright ... ]
-                 ↑    ↑
+                 ^    ^
               A[i-1]  A[i]
 
 Array B:  [ ... Bleft | Bright ... ]
-                 ↑    ↑
+                 ^    ^
               B[j-1]  B[j]
 ```
 
 **Why `-inf` and `inf`?**
-- If `i = 0`: No elements from A in left half → `Aleft = -inf` (won't affect max comparison)
-- If `i = m`: All elements from A in left half → `Aright = inf` (won't affect min comparison)
+- If `i = 0`: No elements from A in left half -> `Aleft = -inf` (won't affect max comparison)
+- If `i = m`: All elements from A in left half -> `Aright = inf` (won't affect min comparison)
 - Same logic applies to B
 
 ### The Partition Condition
@@ -133,16 +133,16 @@ Left Half:  {A[0..i-1], B[0..j-1]}   must be ≤   Right Half: {A[i..m-1], B[j..
 ```
 
 We only need to check **cross comparisons** because arrays are already sorted internally:
-- `Aleft <= Bright`: Largest from A's left ≤ Smallest from B's right ✓
-- `Bleft <= Aright`: Largest from B's left ≤ Smallest from A's right ✓
+- `Aleft <= Bright`: Largest from A's left <= Smallest from B's right
+- `Bleft <= Aright`: Largest from B's left <= Smallest from A's right
 
 ```
-     Aleft ──────→ Bright  ✓ (cross check 1)
-       ↑            ↑
+     Aleft ------> Bright  (cross check 1)
+       |            |
 A: [1, 3 | 5, 7]   
 B: [2, 4 | 6, 8]
-       ↓            ↓
-     Bleft ──────→ Aright  ✓ (cross check 2)
+       |            |
+     Bleft ------> Aright  (cross check 2)
 ```
 
 ### Adjusting the Binary Search
@@ -156,11 +156,11 @@ else:
 
 **When `Aleft > Bright`:**
 - The largest element from A's left is bigger than the smallest from B's right
-- We took too many elements from A → decrease `i`
+- We took too many elements from A -> decrease `i`
 
 **When `Bleft > Aright`:**
 - The largest element from B's left is bigger than the smallest from A's right
-- We took too few elements from A → increase `i`
+- We took too few elements from A -> increase `i`
 
 ### Computing the Median
 
@@ -194,11 +194,11 @@ Iteration 1: i = 1, j = 0
   Bleft = -inf (j=0, no elements from B)
   Bright = B[0] = 2
 
-  Check: Aleft(1) <= Bright(2) ✓
-         Bleft(-inf) <= Aright(3) ✓
+  Check: Aleft(1) <= Bright(2) OK
+         Bleft(-inf) <= Aright(3) OK
 
   Valid partition!
-  total is odd → return min(Aright, Bright) = min(3, 2) = 2
+  total is odd -> return min(Aright, Bright) = min(3, 2) = 2
 ```
 
 ---

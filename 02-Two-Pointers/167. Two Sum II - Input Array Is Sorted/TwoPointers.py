@@ -21,8 +21,8 @@ class Solution:
                 # Return 1-indexed positions as per problem statement
                 return [left + 1, right + 1]
             elif current_sum < target:
-                # Need a larger sum → move left pointer rightward
+                # Need a larger sum -> move left pointer rightward
                 left += 1
             else:
-                # Need a smaller sum → move right pointer leftward
+                # Need a smaller sum -> move right pointer leftward
                 right -= 1

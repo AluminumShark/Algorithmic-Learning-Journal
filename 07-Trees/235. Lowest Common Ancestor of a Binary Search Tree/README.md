@@ -67,7 +67,7 @@ This is **NOT** a generic binary tree LCA problem. Because we have a **BST**, we
 ### The "Split Point" Intuition
 
 ```
-        6          ← p=2 is LEFT, q=8 is RIGHT → SPLIT POINT!
+        6          <- p=2 is LEFT, q=8 is RIGHT -> SPLIT POINT!
        / \
       2   8
      / \ / \
@@ -114,13 +114,13 @@ This is O(h) space due to recursion stack. The iterative version is preferred fo
 ```
 Find LCA(3, 5):
 
-        6     cur=6: 6 > 3 AND 6 > 5 → go LEFT
+        6     cur=6: 6 > 3 AND 6 > 5 -> go LEFT
        / \
       2   8
      / \ 
-    0  4      cur=2: 2 < 3 AND 2 < 5 → go RIGHT
+    0  4      cur=2: 2 < 3 AND 2 < 5 -> go RIGHT
       / \
-     3   5    cur=4: 4 > 3 BUT 4 < 5 → SPLIT! Return 4
+     3   5    cur=4: 4 > 3 BUT 4 < 5 -> SPLIT! Return 4
 
 LCA(3, 5) = 4
 ```

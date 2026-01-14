@@ -72,14 +72,14 @@ When both pointers are in a cycle of length `L`:
 
 ```
 List with cycle:  3 -> 2 -> 0 -> -4
-                       ↑         |
+                       ^         |
                        └─────────┘
 
 Step 0: S=3, F=3
 Step 1: S=2, F=0
 Step 2: S=0, F=2 (F went -4 -> 2)
 Step 3: S=-4, F=-4
-S == F → Cycle detected!
+S == F -> Cycle detected!
 ```
 
 ## Implementation Details

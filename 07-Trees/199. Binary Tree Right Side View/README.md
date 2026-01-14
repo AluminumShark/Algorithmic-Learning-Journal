@@ -6,22 +6,22 @@ Given the `root` of a binary tree, imagine yourself standing on the **right side
 
 **Example 1:**
 ```
-    1         →  1
+    1         ->  1
    / \
-  2   3       →  3
+  2   3       ->  3
    \   \
-    5   4     →  4
+    5   4     ->  4
 
 Output: [1, 3, 4]
 ```
 
 **Example 2:**
 ```
-    1         →  1
+    1         ->  1
    /
-  2           →  2
+  2           ->  2
  /
-3             →  3
+3             ->  3
 
 Output: [1, 2, 3]
 (Left side is visible when right is empty!)
@@ -61,7 +61,7 @@ This is essentially [102. Binary Tree Level Order Traversal](../102.%20Binary%20
 
 ```
 Level Order:        [[1], [2, 3], [5, 4]]
-Right Side View:    [1, 3, 4]  ← last element of each level
+Right Side View:    [1, 3, 4]  <- last element of each level
 ```
 
 ### The Key Check
@@ -140,9 +140,9 @@ dfs(node.right, depth + 1)
      / \   \
     4   5   6
 
-Level 0: [1]       → Right view: 1, Left view: 1
-Level 1: [2, 3]    → Right view: 3, Left view: 2
-Level 2: [4, 5, 6] → Right view: 6, Left view: 4
+Level 0: [1]       -> Right view: 1, Left view: 1
+Level 1: [2, 3]    -> Right view: 3, Left view: 2
+Level 2: [4, 5, 6] -> Right view: 6, Left view: 4
 
 Right Side View: [1, 3, 6]
 Left Side View:  [1, 2, 4]

@@ -49,7 +49,7 @@ This is equivalent to: `rotate(matrix) = reverse(transpose(matrix))`
    - More intuitive but slightly more complex indexing
 
 2. **Direct coordinate mapping**: Calculate new positions directly
-   - `(i, j) → (j, n-1-i)` for 90° clockwise rotation
+   - `(i, j) -> (j, n-1-i)` for 90° clockwise rotation
 
 ## Implementation Details
 

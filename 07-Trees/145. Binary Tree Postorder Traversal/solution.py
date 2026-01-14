@@ -47,7 +47,7 @@ class SolutionRecursive:
 # - Second encounter (visited=True): Add node's value to result
 #
 # This elegantly simulates the call stack behavior of recursion,
-# ensuring we process: Left → Right → Root (postorder)
+# ensuring we process: Left -> Right -> Root (postorder)
 #
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
@@ -64,8 +64,8 @@ class Solution:
                     res.append(cur.val)
                 else:
                     # First visit: schedule for later, process children first
-                    # Push order: root(True) → right(False) → left(False)
-                    # Pop order: left → right → root (postorder!)
+                    # Push order: root(True) -> right(False) -> left(False)
+                    # Pop order: left -> right -> root (postorder!)
                     stack.append(cur)
                     visit.append(True)
 

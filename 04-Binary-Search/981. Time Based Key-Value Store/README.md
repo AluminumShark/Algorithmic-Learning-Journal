@@ -86,7 +86,7 @@ The problem guarantees timestamps are strictly increasing for each key:
 
 ## Implementation Details
 
-- Use dictionary mapping key → list of (timestamp, value) tuples
+- Use dictionary mapping key -> list of (timestamp, value) tuples
 - Tuples stored in insertion order (already sorted by timestamp)
 - Binary search finds floor value efficiently
 - Return empty string for missing keys or no valid timestamps

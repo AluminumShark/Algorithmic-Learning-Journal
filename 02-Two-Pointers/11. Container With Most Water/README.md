@@ -73,7 +73,7 @@ Area = min(1, 7) × 8 = 8
 
 Move L (shorter):
              L                    R
-Area = min(8, 7) × 7 = 49 ← Maximum
+Area = min(8, 7) × 7 = 49 <- Maximum
 ```
 
 ## Related Problems

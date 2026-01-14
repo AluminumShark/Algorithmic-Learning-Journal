@@ -84,9 +84,9 @@ Counter-example:
 ```
     5
    / \
-  1   4      ← 4 < 5, passes parent check
+  1   4      <- 4 < 5, passes parent check
      / \
-    3   6    ← 3 is in RIGHT subtree of 5, but 3 < 5!
+    3   6    <- 3 is in RIGHT subtree of 5, but 3 < 5!
 ```
 
 The node `3` passes the check against its parent `4`, but violates the BST property with respect to the root `5`.
@@ -94,12 +94,12 @@ The node `3` passes the check against its parent `4`, but violates the BST prope
 ### Visual Range Propagation
 
 ```
-        5                 Range: (-∞, +∞)
+        5                 Range: (-inf, +inf)
        / \
-      1   6               1: (-∞, 5) ✓    6: (5, +∞) ✓
+      1   6               1: (-inf, 5) OK    6: (5, +inf) OK
      / \   \
-    0   2   7             0: (-∞, 1) ✓    7: (6, +∞) ✓
-                          2: (1, 5) ✓
+    0   2   7             0: (-inf, 1) OK    7: (6, +inf) OK
+                          2: (1, 5) OK
 
 Each node must be within its range!
 ```

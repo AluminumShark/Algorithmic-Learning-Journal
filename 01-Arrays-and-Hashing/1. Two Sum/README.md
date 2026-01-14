@@ -25,7 +25,7 @@ Output: [1,2]
 ### Solution 1: Basic Hash Map (Two-Pass)
 
 **Key Steps:**
-1. First pass: Build a mapping of `(target - num)` → index
+1. First pass: Build a mapping of `(target - num)` -> index
 2. Second pass: Check if current number exists in the mapping
 3. Ensure indices are different before returning
 

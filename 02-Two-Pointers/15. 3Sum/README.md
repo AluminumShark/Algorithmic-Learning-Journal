@@ -73,7 +73,7 @@ nums = [-4, -1, -1, 0, 1, 2]
 i = 1 (value = -1)
 L = 2, R = 5
 
--1 + -1 + 2 = 0 ✓
+-1 + -1 + 2 = 0 (found!)
 ```
 
 ## Pattern Recognition

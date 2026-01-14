@@ -73,13 +73,13 @@ Example: `[4,5,6,7,0,1,2]`
    - If `nums[mid] > nums[right]`: 
      - This means `mid` is in the **left segment** (larger values)
      - The pivot (minimum) must be to the **right** of `mid`
-     - Example: `nums[mid]=6, nums[right]=2` → mid is in [4,5,6,7], min is in [0,1,2]
+     - Example: `nums[mid]=6, nums[right]=2` -> mid is in [4,5,6,7], min is in [0,1,2]
      - Action: `left = mid + 1` (search right)
 
    - If `nums[mid] ≤ nums[right]`:
      - This means `mid` is in the **right segment** (smaller values)
      - The pivot (minimum) is at `mid` or to the **left** of `mid`
-     - Example: `nums[mid]=1, nums[right]=2` → mid is in [0,1,2], min could be 0 or 1
+     - Example: `nums[mid]=1, nums[right]=2` -> mid is in [0,1,2], min could be 0 or 1
      - Action: `right = mid` (search left, keep mid as candidate)
 
 2. **Why Not Compare with Left Boundary?**
@@ -99,17 +99,17 @@ Array: [4,5,6,7,0,1,2]
         L     M     R
 
 nums[mid] = 6, nums[right] = 2
-6 > 2 → mid is in left segment [4,5,6,7]
-→ Minimum must be in [0,1,2] (right of mid)
-→ left = mid + 1
+6 > 2 -> mid is in left segment [4,5,6,7]
+-> Minimum must be in [0,1,2] (right of mid)
+-> left = mid + 1
 
 Array: [4,5,6,7,0,1,2]
               L M   R
 
 nums[mid] = 1, nums[right] = 2
-1 ≤ 2 → mid is in right segment [0,1,2]
-→ Minimum is at mid or left of mid
-→ right = mid (keep mid as candidate)
+1 ≤ 2 -> mid is in right segment [0,1,2]
+-> Minimum is at mid or left of mid
+-> right = mid (keep mid as candidate)
 ```
 
 ## Implementation Details

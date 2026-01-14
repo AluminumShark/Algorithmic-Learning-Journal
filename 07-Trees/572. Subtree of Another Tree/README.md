@@ -92,18 +92,18 @@ This problem requires **two layers of recursion**:
    1   2
 
 Step 1: isSubtree(root=3, subRoot)
-        → dfs(3, 4) → 3 ≠ 4, return False
-        → Try left: isSubtree(root=4, subRoot)
+        -> dfs(3, 4) -> 3 ≠ 4, return False
+        -> Try left: isSubtree(root=4, subRoot)
 
 Step 2: isSubtree(root=4, subRoot)
-        → dfs(4, 4) → 4 == 4 ✓
-          → dfs(1, 1) → 1 == 1 ✓
-            → dfs(None, None) → True ✓
-            → dfs(None, None) → True ✓
-          → dfs(2, 2) → 2 == 2 ✓
-            → dfs(None, None) → True ✓
-            → dfs(None, None) → True ✓
-        → Return True!
+        -> dfs(4, 4) -> 4 == 4, match
+          -> dfs(1, 1) -> 1 == 1, match
+            -> dfs(None, None) -> True
+            -> dfs(None, None) -> True
+          -> dfs(2, 2) -> 2 == 2, match
+            -> dfs(None, None) -> True
+            -> dfs(None, None) -> True
+        -> Return True!
 
 Result: True (found matching subtree at node 4)
 ```

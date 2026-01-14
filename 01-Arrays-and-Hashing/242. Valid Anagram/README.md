@@ -75,7 +75,7 @@ This problem demonstrates:
 
 ## Edge Cases
 
-- Empty strings (both empty → true)
+- Empty strings (both empty -> true)
 - Different lengths (always false)
 - Single character strings
 - Strings with repeated characters

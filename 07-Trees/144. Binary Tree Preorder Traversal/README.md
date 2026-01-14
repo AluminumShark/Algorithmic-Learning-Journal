@@ -42,7 +42,7 @@ Uses a stack to simulate the recursion. The key insight is that we process the c
 
 ## Key Concepts
 
-1. **Traversal Order**: Preorder = Root → Left → Right
+1. **Traversal Order**: Preorder = Root -> Left -> Right
 2. **Stack Usage**: Save right children to process after completing left subtrees
 3. **Recursive vs Iterative**: Both achieve the same result; iterative gives explicit control over the call stack
 
@@ -50,9 +50,9 @@ Uses a stack to simulate the recursion. The key insight is that we process the c
 
 | Traversal | Order | Common Use Cases |
 |-----------|-------|------------------|
-| **Preorder** | Root → Left → Right | Copy tree, prefix expression |
-| **Inorder** | Left → Root → Right | BST sorted order |
-| **Postorder** | Left → Right → Root | Delete tree, postfix expression |
+| **Preorder** | Root -> Left -> Right | Copy tree, prefix expression |
+| **Inorder** | Left -> Root -> Right | BST sorted order |
+| **Postorder** | Left -> Right -> Root | Delete tree, postfix expression |
 
 ## Related Problems
 

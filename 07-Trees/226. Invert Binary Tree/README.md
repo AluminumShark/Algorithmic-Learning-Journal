@@ -105,7 +105,7 @@ This problem is famously associated with Max Howell's tweet:
 
 | Aspect | DFS (Recursive) | DFS (Iterative) | BFS |
 |--------|-----------------|-----------------|-----|
-| Code Simplicity | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
+| Code Simplicity | High | Medium | Medium |
 | Space (Balanced) | O(log n) | O(log n) | O(n) |
 | Space (Skewed) | O(n) | O(n) | O(1) |
 | Stack Overflow Risk | Yes | No | No |

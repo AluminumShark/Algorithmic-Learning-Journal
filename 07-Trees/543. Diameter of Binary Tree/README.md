@@ -71,7 +71,7 @@ At node 2:
 At node 1:
 - `left_height = 2` (from node 2)
 - `right_height = 1` (from node 3)
-- Diameter through node 1 = `2 + 1 = 3` ← **This is the answer!**
+- Diameter through node 1 = `2 + 1 = 3` <- **This is the answer!**
 
 ### Why `nonlocal`?
 

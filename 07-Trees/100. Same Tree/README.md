@@ -68,11 +68,11 @@ At each recursive call, there are exactly three possible states:
 The code elegantly handles this:
 
 ```python
-if not p and not q:           # Both null → same
+if not p and not q:           # Both null -> same
     return True
-if p and q and p.val == q.val: # Both exist with same value → check children
+if p and q and p.val == q.val: # Both exist with same value -> check children
     return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
-else:                          # All other cases → not same
+else:                          # All other cases -> not same
     return False
 ```
 

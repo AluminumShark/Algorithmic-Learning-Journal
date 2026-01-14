@@ -60,10 +60,10 @@ Why `range(len(q))`? At the start of each iteration, `len(q)` equals the number 
 ```
     3          Initial: q = [3]
    / \
-  9  20        Level 0: process 1 node → q = [9, 20]
+  9  20        Level 0: process 1 node -> q = [9, 20]
     /  \
-   15   7      Level 1: process 2 nodes → q = [15, 7]
-               Level 2: process 2 nodes → q = []
+   15   7      Level 1: process 2 nodes -> q = [15, 7]
+               Level 2: process 2 nodes -> q = []
 
 Result: [[3], [9, 20], [15, 7]]
 ```

@@ -55,8 +55,8 @@ Explanation:
 Cars closer to target determine if cars behind can catch up:
 ```
 target = 10
-Car A at position 8, speed 2 → time = 1
-Car B at position 5, speed 10 → time = 0.5
+Car A at position 8, speed 2 -> time = 1
+Car B at position 5, speed 10 -> time = 0.5
 
 But B cannot pass A, so B joins A's fleet (time = 1)
 ```

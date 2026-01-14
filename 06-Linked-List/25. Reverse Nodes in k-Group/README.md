@@ -24,16 +24,16 @@ Output: [3,2,1,4,5]
 For `[1,2,3,4,5]` with `k = 2`:
 
 ```
-Initial:   dummy → 1 → 2 → 3 → 4 → 5 → null
-                   ↑       ↑
+Initial:   dummy -> 1 -> 2 -> 3 -> 4 -> 5 -> null
+                   ^       ^
               groupStart  groupNext
            
-After 1st: dummy → 2 → 1 → 3 → 4 → 5 → null
-                        ↑   ↑       ↑
+After 1st: dummy -> 2 -> 1 -> 3 -> 4 -> 5 -> null
+                        ^   ^       ^
                    groupPrev groupStart groupNext
                    
-After 2nd: dummy → 2 → 1 → 4 → 3 → 5 → null
-                             ↑   ↑
+After 2nd: dummy -> 2 -> 1 -> 4 -> 3 -> 5 -> null
+                             ^   ^
                         groupPrev  (5 is < k, stop)
 ```
 
@@ -43,7 +43,7 @@ After 2nd: dummy → 2 → 1 → 4 → 3 → 5 → null
 For each group:
 1. Find kth node (return if < k nodes remain)
 2. Reverse the group in-place
-3. Reconnect: previous → reversed group → next group
+3. Reconnect: previous -> reversed group -> next group
 4. Advance groupPrev to end of reversed group
 ```
 
@@ -99,10 +99,10 @@ For `[1,2,3,4,5]`, `k = 3`:
 
 | Step | Action | List State |
 |------|--------|------------|
-| Init | Setup dummy | `dummy→1→2→3→4→5` |
+| Init | Setup dummy | `dummy->1->2->3->4->5` |
 | Find k=3 | kth=3 | groupPrev=dummy, groupStart=1, kth=3, groupNext=4 |
-| Reverse | 1→2→3 becomes 3→2→1 | `dummy→3→2→1→4→5` |
-| Connect | groupPrev→kth, groupPrev=1 | `dummy→3→2→1→4→5` |
+| Reverse | 1->2->3 becomes 3->2->1 | `dummy->3->2->1->4->5` |
+| Connect | groupPrev->kth, groupPrev=1 | `dummy->3->2->1->4->5` |
 | Find k=3 | Only 2 nodes left | **Return** |
 
 **Result:** `[3,2,1,4,5]`

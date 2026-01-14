@@ -23,7 +23,7 @@ class Solution:
             front = head.next            # The student at the front of the queue
         
             if front.val == sandwiches[i]:
-                # Student takes the sandwich → remove from queue
+                # Student takes the sandwich -> remove from queue
                 head.next = front.next
                 if front is tail:
                     tail = head          # Queue becomes empty
@@ -31,7 +31,7 @@ class Solution:
                 i += 1                   # Move to next sandwich
                 rotate = 0               # Reset rotation counter
             else:
-                # Student refuses the sandwich → move to back
+                # Student refuses the sandwich -> move to back
                 if rotate == size:
                     # If everyone has refused once, process stops
                     break

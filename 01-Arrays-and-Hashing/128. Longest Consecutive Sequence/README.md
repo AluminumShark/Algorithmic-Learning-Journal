@@ -61,10 +61,10 @@ Output: 9
 This ensures we only start counting from the beginning of a sequence:
 ```
 nums = [1, 2, 3, 4]
-- 1: (0 not in set) → Start here, count 4
-- 2: (1 in set) → Skip (not a start)
-- 3: (2 in set) → Skip
-- 4: (3 in set) → Skip
+- 1: (0 not in set) -> Start here, count 4
+- 2: (1 in set) -> Skip (not a start)
+- 3: (2 in set) -> Skip
+- 4: (3 in set) -> Skip
 ```
 
 ### Time Complexity Proof

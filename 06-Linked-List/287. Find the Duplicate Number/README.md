@@ -72,7 +72,7 @@ index:  0  1  2  3  4
 4 -> nums[4] = 2  <- cycle! (back to index 2)
 
 Path: 0 -> 1 -> 3 -> 2 -> 4 -> 2 -> 4 -> ...
-                     ↑__________|
+                     ^__________|
                      (cycle at duplicate value 2)
 ```
 

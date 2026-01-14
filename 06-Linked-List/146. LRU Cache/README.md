@@ -59,7 +59,7 @@ self.cache.popitem(last=False)   # Remove "least recently used" (first)
 ### Order Representation
 ```
 OrderedDict: {LRU ... ... ... MRU}
-              ↑                 ↑
+              ^                 ^
           First item        Last item
           (popitem)         (move_to_end)
 ```

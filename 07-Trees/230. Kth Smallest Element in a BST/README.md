@@ -33,7 +33,7 @@ k = 3, Output: 3
 **In-order traversal of a BST always produces values in ascending sorted order!**
 
 ```
-In-order: Left → Node → Right
+In-order: Left -> Node -> Right
 
         5
        / \
@@ -150,14 +150,14 @@ This is the **standard template** for iterative in-order traversal.
        / \
       3   6      Stack-based in-order:
      / \
-    2   4        1. Push 5, 3, 2 → pop 2, k=2
+    2   4        1. Push 5, 3, 2 -> pop 2, k=2
    /             2. Pop 3, k=1
-  1              3. Push 4 → pop 4, k=0 → return 4? NO!
+  1              3. Push 4 -> pop 4, k=0 -> return 4? NO!
                  
 Wait, let me trace correctly:
-1. Push 5,3,2,1 → pop 1, k=2
+1. Push 5,3,2,1 -> pop 1, k=2
 2. Pop 2, k=1  
-3. Pop 3, k=0 → return 3 ✓
+3. Pop 3, k=0 -> return 3
 
 kth smallest = 3
 ```

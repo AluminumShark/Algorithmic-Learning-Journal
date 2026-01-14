@@ -67,12 +67,12 @@ In a rotated sorted array, at least one half is always sorted:
 Once we know which half is sorted, we can determine if target lies within that sorted range:
 
 1. **Left half sorted** (`nums[L] <= nums[mid]`):
-   - If `nums[L] <= target < nums[mid]`: Target must be in left half → `R = mid - 1`
-   - Otherwise: Target must be in right half → `L = mid + 1`
+   - If `nums[L] <= target < nums[mid]`: Target must be in left half -> `R = mid - 1`
+   - Otherwise: Target must be in right half -> `L = mid + 1`
 
 2. **Right half sorted** (`nums[L] > nums[mid]`):
-   - If `nums[mid] < target <= nums[R]`: Target must be in right half → `L = mid + 1`
-   - Otherwise: Target must be in left half → `R = mid - 1`
+   - If `nums[mid] < target <= nums[R]`: Target must be in right half -> `L = mid + 1`
+   - Otherwise: Target must be in left half -> `R = mid - 1`
 
 ## Implementation Details
 

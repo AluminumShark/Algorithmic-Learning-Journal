@@ -28,7 +28,7 @@ Use a min-heap to always get the smallest element among all list heads.
 2. **Process**: Repeatedly pop the smallest, add it to result, push its next node
 3. **Terminate**: When heap is empty, all nodes have been processed
 
-### The Tie-Breaking Problem ⚠️
+### The Tie-Breaking Problem
 
 Python's `heapq` compares tuples element by element. If two nodes have equal values, it tries to compare the nodes themselves:
 
@@ -47,13 +47,13 @@ heapq.heappush(heap, (node.val, i, node))
 ```
 
 Now the comparison sequence is:
-1. Compare `val` → if different, we're done
-2. Compare `i` (index) → always different, so we never compare nodes!
+1. Compare `val` -> if different, we're done
+2. Compare `i` (index) -> always different, so we never compare nodes!
 
 | Tuple A | Tuple B | Comparison |
 |---------|---------|------------|
-| `(5, 0, nodeA)` | `(5, 1, nodeB)` | `5 == 5` → compare `0 < 1` ✓ |
-| `(3, 2, nodeC)` | `(5, 0, nodeA)` | `3 < 5` ✓ |
+| `(5, 0, nodeA)` | `(5, 1, nodeB)` | `5 == 5` -> compare `0 < 1` |
+| `(3, 2, nodeC)` | `(5, 0, nodeA)` | `3 < 5` |
 
 ### Complexity Analysis
 

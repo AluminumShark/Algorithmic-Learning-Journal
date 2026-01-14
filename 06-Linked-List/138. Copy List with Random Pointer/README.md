@@ -24,13 +24,13 @@ Output: [[1,1],[2,1]]
 ### Solution 1: Hash Map (Two Passes)
 
 **Key Steps:**
-1. **First Pass**: Create copy nodes and store mapping `{original → copy}` in hash map
+1. **First Pass**: Create copy nodes and store mapping `{original -> copy}` in hash map
 2. **Second Pass**: Set `next` and `random` pointers using the hash map lookup
 
 ### Solution 2: Interweaving / Space Optimized (Three Passes)
 
 **Key Steps:**
-1. **Interweave**: Insert copy nodes between original nodes (A→A'→B→B'→...)
+1. **Interweave**: Insert copy nodes between original nodes (A->A'->B->B'->...)
 2. **Set Random**: Use interweaved structure to set random pointers
 3. **Separate**: Extract copy list while restoring original list
 
@@ -81,7 +81,7 @@ Since copy is right after original, `cur.random.next` is the copy of `cur.random
 **Step 3 - Separate lists:**
 ```
 A -> A' -> B -> B' -> C -> C'
-        ↓
+        v
 Original: A -> B -> C
 Copy:     A' -> B' -> C'
 ```
@@ -91,7 +91,7 @@ Copy:     A' -> B' -> C'
 ```
 Original list:
 7 -> 13 -> 11 -> 10 -> 1
-↓    ↓     ↓     ↓    ↓
+v    v     v     v    v
 N    7    10    11    7   (random pointers)
 
 Step 1 - Interweave:

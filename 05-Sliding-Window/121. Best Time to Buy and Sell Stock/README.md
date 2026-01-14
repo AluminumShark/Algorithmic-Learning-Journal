@@ -52,7 +52,7 @@ This problem can be viewed as a simplified sliding window:
 ```
 prices = [7, 1, 5, 3, 6, 4]
               L        R
-           buy=1    sell=6  → profit = 5
+           buy=1    sell=6  -> profit = 5
 ```
 
 ### Greedy Approach

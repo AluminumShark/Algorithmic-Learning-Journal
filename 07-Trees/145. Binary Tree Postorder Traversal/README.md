@@ -27,7 +27,7 @@ def dfs(node):
 - **Time:** `O(n)` - visit each node exactly once
 - **Space:** `O(n)` - recursion stack depth (worst case for skewed tree)
 
-### Solution 2: Iterative (Visit Flag / Tagging Method) ⭐
+### Solution 2: Iterative (Visit Flag / Tagging Method) [Recommended]
 
 This is a **universal technique** that works for all three traversals (preorder, inorder, postorder) with minimal modification.
 
@@ -43,8 +43,8 @@ The key insight is to use a **boolean flag** to track whether a node's children 
 #### How It Simulates Recursion
 
 ```
-Push Order: root(True) → right(False) → left(False)
-Pop Order:  left → right → root  ← This is postorder!
+Push Order: root(True) -> right(False) -> left(False)
+Pop Order:  left -> right -> root  <- This is postorder!
 ```
 
 By pushing in reverse order and using the flag, we ensure:
@@ -90,9 +90,9 @@ Unlike preorder (process immediately) and inorder (process after left), postorde
 
 | Traversal | Push Order (with flags) | Result Order |
 |-----------|------------------------|--------------|
-| Preorder | root(True), right(False), left(False) → process on True | Root → Left → Right |
-| Inorder | right(False), root(True), left(False) → process on True | Left → Root → Right |
-| Postorder | root(True), right(False), left(False) → process on True | Left → Right → Root |
+| Preorder | root(True), right(False), left(False) -> process on True | Root -> Left -> Right |
+| Inorder | right(False), root(True), left(False) -> process on True | Left -> Root -> Right |
+| Postorder | root(True), right(False), left(False) -> process on True | Left -> Right -> Root |
 
 ## Related Problems
 

@@ -92,13 +92,13 @@ Process Order:
 ### Visual Walkthrough
 
 ```
-      3          dfs(3, cmx=3): 3 >= 3 ✓ good=1
+      3          dfs(3, cmx=3): 3 >= 3, good=1
      / \                       cmx stays 3
-    1   4        dfs(1, cmx=3): 1 < 3 ✗ good=0
-   /   / \       dfs(4, cmx=3): 4 >= 3 ✓ good=1, cmx→4
-  3   1   5      dfs(3, cmx=3): 3 >= 3 ✓ good=1
-                 dfs(1, cmx=4): 1 < 4 ✗ good=0
-                 dfs(5, cmx=4): 5 >= 4 ✓ good=1
+    1   4        dfs(1, cmx=3): 1 < 3, good=0
+   /   / \       dfs(4, cmx=3): 4 >= 3, good=1, cmx->4
+  3   1   5      dfs(3, cmx=3): 3 >= 3, good=1
+                 dfs(1, cmx=4): 1 < 4, good=0
+                 dfs(5, cmx=4): 5 >= 4, good=1
 
 Total: 1 + 0 + 1 + 1 + 0 + 1 = 4 good nodes
 ```

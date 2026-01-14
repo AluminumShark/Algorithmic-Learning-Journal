@@ -18,7 +18,7 @@ Explanation: Replace the two 'A's with two 'B's or vice versa.
 
 Input: s = "AABABBA", k = 1
 Output: 4
-Explanation: Replace the one 'A' in the middle with 'B' → "AABBBBA"
+Explanation: Replace the one 'A' in the middle with 'B' -> "AABBBBA"
 ```
 
 ## Algorithm
@@ -59,7 +59,7 @@ Frequencies: A=3, B=2
 maxFreq = 3 (A appears most)
 Characters to replace = 5 - 3 = 2
 
-If k = 2: Valid (replace 2 B's with A's → "AAAAA")
+If k = 2: Valid (replace 2 B's with A's -> "AAAAA")
 If k = 1: Invalid (need 2 replacements but only have 1)
 ```
 

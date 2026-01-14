@@ -74,9 +74,9 @@ The combination of **preorder traversal** + **null markers (#)** allows **unique
 
 | Format | Can Reconstruct? | Why |
 |--------|-----------------|-----|
-| Preorder only | ❌ No | Can't determine structure |
-| Preorder + Inorder | ✅ Yes | But needs two arrays |
-| Preorder + Nulls | ✅ Yes | Nulls encode structure! |
+| Preorder only | No | Can't determine structure |
+| Preorder + Inorder | Yes | But needs two arrays |
+| Preorder + Nulls | Yes | Nulls encode structure! |
 
 ### How Null Markers Encode Structure
 
@@ -88,7 +88,7 @@ The combination of **preorder traversal** + **null markers (#)** allows **unique
     4   5
 
 Preorder with nulls: 1, 2, #, #, 3, 4, #, #, 5, #, #
-                     ↑  ↑  ↑  ↑  ↑  ↑  ↑  ↑  ↑  ↑  ↑
+                     ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^
                      1  2  2L 2R 3  4  4L 4R 5  5L 5R
 
 Each # tells us "this child is null, go back up"

@@ -14,7 +14,7 @@ Given the `root` of a binary tree, return the maximum path sum of any **non-empt
    / \
   2   3
 
-Output: 6 (path: 2 → 1 → 3)
+Output: 6 (path: 2 -> 1 -> 3)
 ```
 
 **Example 2:**
@@ -25,7 +25,7 @@ Output: 6 (path: 2 → 1 → 3)
      /  \
     15   7
 
-Output: 42 (path: 15 → 20 → 7)
+Output: 42 (path: 15 -> 20 -> 7)
 ```
 
 ## Solution: Post-order DFS with Global Maximum
@@ -67,8 +67,8 @@ This is the **most important concept** in this problem:
        /    \
      left   right
 
-"Arch" path:    left ← node → right  (curves through node)
-"Straight" path: left ← node  OR  node → right (extends to parent)
+"Arch" path:    left <- node -> right  (curves through node)
+"Straight" path: left <- node  OR  node -> right (extends to parent)
 ```
 
 | Path Type | Formula | When Used |
@@ -81,7 +81,7 @@ This is the **most important concept** in this problem:
 ```
        parent
          |
-        node      ← If we include BOTH left and right...
+        node      <- If we include BOTH left and right...
        /    \
      left   right
 
@@ -102,7 +102,7 @@ Why clamp to 0? **If a subtree sum is negative, don't include it!**
 ```
     5
    /
- -10     ← Including this makes sum worse
+ -10     <- Including this makes sum worse
  /
 3
 
@@ -132,7 +132,7 @@ DFS Post-order:
             return 7
 
 4. Node 20: left=15, right=7
-            arch = 15+20+7 = 42, update ans=42 ✓
+            arch = 15+20+7 = 42, update ans=42 (max!)
             return 20+max(15,7) = 35
 
 5. Node -10: left=9, right=35

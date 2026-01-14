@@ -29,7 +29,7 @@ class ListNode:
 #   heapq.heappush(heap, (node.val, i, node))
 #
 # Now comparisons never reach the ListNode:
-#   (5, 0, nodeA) vs (5, 1, nodeB) → compares indices, not nodes
+#   (5, 0, nodeA) vs (5, 1, nodeB) -> compares indices, not nodes
 #
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
